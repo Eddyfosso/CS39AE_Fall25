@@ -3,18 +3,17 @@ import streamlit as st
 st.title("👋 My Bio")
 
 # ---------- TODO: Replace with your own info ----------
-NAME = "Your Name"
-PROGRAM = "Your Program / Major / Role"
-INTRO = (
-    "Write 2–3 sentences about yourself: what you’re studying/working on, "
-    "what excites you about data visualization or computing, etc."
+NAME = "Eddy Fosso"
+PROGRAM = "Data Visualization / Major: Data Science and Machine Learning"
+INTRO = ( I am a passionate student pursuing my degree in Data Science at Metropolitan State University of Denver. I have a strong interest in data science, machine learning, and web development.I enjoy building interactive applications and solving real-world problems with code.
+    
 )
 FUN_FACTS = [
-    "I love …",
-    "I’m learning …",
-    "I want to build …",
+    "I love pancakes",
+    "I’m learning python",
+    "I want to build dynamic website",
 ]
-PHOTO_PATH = "your_photo.jpg"  # Put a file in repo root or set a URL
+PHOTO_PATH = """f.jpg"""  # Put a file in repo root or set a URL
 
 # ---------- Layout ----------
 col1, col2 = st.columns([1, 2], vertical_alignment="center")
