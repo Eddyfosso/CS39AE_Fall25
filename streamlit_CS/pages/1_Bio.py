@@ -14,7 +14,7 @@ FUN_FACTS = [
     "I’m learning python",
     "I want to build website",
 ]
-PHOTO_PATH = ""C:/Users/Eddy/OneDrive/Pictures/f.jpg""  # Put a file in repo root or set a URL
+PHOTO_PATH = ""f.jpg""  # Put a file in repo root or set a URL
 
 # ---------- Layout ----------
 col1, col2 = st.columns([1, 2], vertical_alignment="center")
