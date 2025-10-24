@@ -14,7 +14,7 @@ FUN_FACTS = [
     "I’m learning python",
     "I want to build website",
 ]
-PHOTO_PATH = "https://1drv.ms/i/c/0c977a7ae1d9e64f/EU_m2eF6epcggAxXAQAAAAAB8CLIH8HCTTTFTBn66nvQkA?e=ZmgNRh"  # Put a file in repo root or set a URL
+PHOTO_PATH = "https://1drv.ms/i/c/0c977a7ae1d9e64f/EU_m2eF6epcggAxXAQAAAAAB8CLIH8HCTTTFTBn66nvQkA?e=ZmgNRh&download=1"  # Put a file in repo root or set a URL
 
 # ---------- Layout ----------
 col1, col2 = st.columns([1, 2], vertical_alignment="center")
