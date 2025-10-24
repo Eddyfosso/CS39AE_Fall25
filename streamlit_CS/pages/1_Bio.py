@@ -30,7 +30,7 @@ with col2:
     st.write(INTRO)
 st.markdown("### Fun facts")
 for i, f in enumerate(FUN_FACTS, start=1):
-    st.write(f"- {f}"")
+    st.write(f"- {f}")
 
 st.divider()
 st.caption("Edit `pages/1_Bio.py` to customize this page.")
