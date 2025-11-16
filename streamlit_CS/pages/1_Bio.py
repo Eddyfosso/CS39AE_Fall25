@@ -8,6 +8,7 @@ PROGRAM = "CS39AE Data Visualization / Data Science and Machine Learning / Stude
 INTRO = (
     "Iam student at Metropolitant University of Denver, "
     "what excites me about data visualization or computing is the ability to turn raw data into actionable insights that solve real-world problems."
+    "I am passionate about transforming complex datasets into clear, actionable insights through thoughtful data visualization. With expertise in Python, Streamlit, and exploratory data analysis, I focus on creating accessible, ethical visualizations that tell compelling data stories."
 )
 FUN_FACTS = [
     "I love pancakes",
