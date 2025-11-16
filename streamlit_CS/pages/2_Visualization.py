@@ -14,7 +14,7 @@ st.markdown("---")
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("C:/Users/Eddy/Downloads/Student_Learning_Analytics.csv")
+    df = pd.read_csv("data/Student_Learning_Analytics.csv")
     return df
 
 df = load_data()
