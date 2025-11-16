@@ -33,18 +33,18 @@ with col2:
     st.image("https://via.placeholder.com/150", use_column_width=True, caption="Eddy Fosso")
 
 st.markdown("""
-## Welcome 👋
+## Welcome
 
 This portfolio showcases my work in **data visualization** and **educational analytics**. 
 Navigate using the sidebar to explore:
 
-- **📄 Bio** — My professional background and visualization philosophy
-- **📊 EDA Gallery** — Exploratory analysis with 4 interactive charts
-- **📈 Dashboard** — Filtered analytics dashboard with KPIs
-- **🧭 Future Work** — Next steps and project reflections
+- **Bio** - My professional background and visualization philosophy
+- **EDA Gallery** - Exploratory analysis with 4 interactive charts
+- **Dashboard** - Filtered analytics dashboard with KPIs
+- **Future Work** - Next steps and project reflections
 """)
 
-st.markdown("### 🎯 Key Highlights")
+st.markdown("### Key Highlights")
 col1, col2, col3 = st.columns(3)
 with col1:
     st.metric("Charts", "4+")
@@ -64,68 +64,8 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 ```
 
-### **Step 5: Commit**
+## Step 5: Commit
+
 Type:
 ```
-Add home page with portfolio overview
-```
-Click **"Commit directly to main"**
-
----
-
-## ✅ What Changed
-
-The **BAD line** was:
-```
-✅ **Home page updated!**
-```
-
-This is now **REMOVED** - it was just instruction text that shouldn't have been in the code!
-
----
-
-## 🎯 Your App Structure is Now COMPLETE:
-```
-streamlit_CS/
-├── data/
-│   └── Student_Learning_Analytics.csv  ✅
-├── pages/
-│   ├── 1_Bio.py  ✅
-│   ├── 2_Visualization.py  ✅
-│   ├── 3_Pie.py  ✅
-│   └── 4_🧭_Future_Work.py  ✅
-├── app.py  ✅ (FIXED)
-├── requirements.txt  ✅
-└── README.md  ✅
-```
-
----
-
-## 🚀 NOW YOU'RE READY TO DEPLOY!
-
-### **Step 1: Go to Streamlit Cloud**
-Visit: https://share.streamlit.io/
-
-### **Step 2: Click "New app"**
-
-### **Step 3: Fill In:**
-- **Repository**: `Eddyfosso/CS39AE_Fall25`
-- **Branch**: `main`
-- **Main file path**: `streamlit_CS/app.py`
-
-### **Step 4: Click "Deploy"**
-
-Wait 2-3 minutes... your app will be live!
-
-You'll get a URL like:
-```
-https://yourname-student-analytics.streamlit.app
-```
-
----
-
-## 📤 SUBMIT THESE 2 LINKS:
-```
-Streamlit App URL: https://share.streamlit.io/...
-
-GitHub Repository: https://github.com/Eddyfosso/CS39AE_Fall25/tree/main/streamlit_CS
+Fix app.py syntax errors
