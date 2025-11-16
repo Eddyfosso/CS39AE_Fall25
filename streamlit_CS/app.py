@@ -62,10 +62,3 @@ st.markdown(f"""
     <a href="https://github.com/Eddyfosso">GitHub</a></p>
 </div>
 """, unsafe_allow_html=True)
-```
-
-## Step 5: Commit
-
-Type:
-```
-Fix app.py syntax errors
