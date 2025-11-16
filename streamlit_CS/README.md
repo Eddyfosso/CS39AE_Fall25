@@ -11,69 +11,89 @@ Eddy Fosso
 ## 📊 Dataset
 - **Name:** Student Learning Analytics
 - **Records:** 351 students
-- **Source:** [Your source]
+- **Source:** Academic performance dataset
 
 ## 🗂️ App Navigation
-- **Bio** - Professional background
-- **EDA Gallery** - 4 interactive charts
-- **Dashboard** - Filtered analytics
-- **Future Work** - Next steps
+- **Bio** - Professional background and visualization philosophy
+- **EDA Gallery** - 4 interactive charts exploring student learning patterns
+- **Dashboard** - Filtered analytics with KPIs and insights
+- **Future Work** - Next steps and project reflections
 
 ## ⚙️ Requirements
-See requirements.txt for dependencies
+See requirements.txt for all dependencies:
+- streamlit==1.28.1
+- pandas==2.0.3
+- plotly==5.17.0
+- numpy==1.24.3
+
+## 🚀 How to Run Locally
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
 
 ## ⚠️ Ethics Note
 This dataset contains student academic records from a single institution.
-Results may not generalize to other universities.
+Results may not generalize to other universities or student populations.
+Patterns shown here are descriptive only and should not be used to make 
+individual judgments about students or their abilities.
 ```
-4. Click **"Commit directly to main"**
 
----
-
-#### **Step 2: Add Data Folder with Your CSV**
-1. Click **"Add file"** → **"Create new file"**
-2. Name: `data/Student_Learning_Analytics.csv`
-3. Click **"Upload files"** instead
-4. Drag/drop your CSV file
-5. Commit
-
----
-
-#### **Step 3: Update Each Page File**
-
-##### **Update 1_📄_Bio.py**
-1. Click on the `pages/` folder
-2. Click **"Add file"** → **"Create new file"**
-3. Name: `1_📄_Bio.py`
-4. Paste bio page code
-5. Commit
-
-##### **Update 2_📊_Charts_Gallery.py**
-1. Click **"Add file"** → **"Create new file"**
-2. Name: `2_📊_Charts_Gallery.py`
-3. Paste gallery code with YOUR dataset
-4. Commit
-
-##### **Update 3_📈_Dashboard.py**
-1. Click **"Add file"** → **"Create new file"**
-2. Name: `3_📈_Dashboard.py`
-3. Paste dashboard code
-4. Commit
-
-##### **Update 4_🧭_Future_Work.py**
-1. Click **"Add file"** → **"Create new file"**
-2. Name: `4_🧭_Future_Work.py`
-3. Paste future work code
-4. Commit
-
----
-
-#### **Step 4: Update requirements.txt**
-1. Click on `requirements.txt`
-2. Click **"Edit"** (pencil icon)
-3. Replace with:
+### **Step 1.5: Commit the File**
+At the bottom, you'll see:
 ```
-streamlit==1.28.1
-pandas==2.0.3
-plotly==5.17.0
-numpy==1.24.3
+[Commit message: ___________] [Commit directly to main]
+```
+
+Click in the message box and type:
+```
+Add README.md documentation
+```
+
+Then click the green **"Commit directly to main"** button
+
+✅ **README.md is now added!**
+
+---
+
+## **STEP 2: Upload Your Data (CSV File)**
+
+### **Step 2.1: Click "Add File" Again**
+Go back to your repo folder (`streamlit_CS`)
+Click **"Add file"** → **"Upload files"**
+
+### **Step 2.2: Create Data Folder**
+You'll see a file upload area. Before uploading, you need to create a `data/` folder.
+
+In the filename box at top, type:
+```
+data/Student_Learning_Analytics.csv
+```
+
+This automatically creates the `data/` folder!
+
+### **Step 2.3: Upload Your CSV**
+Click **"Choose your files"** or drag/drop your CSV file from your computer
+
+### **Step 2.4: Commit**
+Type message:
+```
+Add student learning analytics dataset
+```
+Click **"Commit directly to main"**
+
+✅ **Data folder created with CSV!**
+
+---
+
+## **STEP 3: Add Bio Page (1_📄_Bio.py)**
+
+### **Step 3.1: Go to Pages Folder**
+Navigate to `streamlit_CS` → Click **`pages`** folder
+
+### **Step 3.2: Create New File**
+Click **"Add file"** → **"Create new file"**
+
+In filename box, type:
+```
+1_📄_Bio.py
