@@ -21,10 +21,10 @@ Eddy Fosso
 
 ## ⚙️ Requirements
 See requirements.txt for all dependencies:
-- streamlit==1.28.1
-- pandas==2.0.3
-- plotly==5.17.0
-- numpy==1.24.3
+- streamlit==1.31.1
+- pandas==2.2.1
+- plotly==5.18.0
+- numpy==1.26.4
 
 ## 🚀 How to Run Locally
 ```bash
