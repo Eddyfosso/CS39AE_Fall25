@@ -2,4 +2,4 @@ streamlit==1.31.1
 pandas==2.2.1
 plotly==5.18.0
 numpy==1.26.4
-networkx==3.2
+networkx==3.3
