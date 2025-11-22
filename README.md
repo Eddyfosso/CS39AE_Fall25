@@ -1,369 +1,275 @@
-# 🔗 Friendship Network Analysis - Streamlit App
-## CS39AE Fall 2025 - Network Analysis Portfolio Project
+# 🤝 College Friendship Network Analysis
 
----
+A comprehensive Streamlit application for analyzing social connections within a college class using network science and graph theory.
 
-## 📋 Project Overview
+## Overview
 
-This Streamlit application analyzes a friendship network from a college class, performing comprehensive network science analysis including:
+This project analyzes a friendship network of 10 college students across 16 connections, providing deep insights into:
+- Network structure and connectivity
+- Individual importance through multiple centrality measures
+- Friendship clusters and communities
+- Information spreading potential
 
-✅ **Network Visualization** - Interactive graph showing all connections  
-✅ **Degree Analysis** - Identifies most connected individuals  
-✅ **Centrality Measures** - Betweenness and closeness centrality calculations  
-✅ **Community Detection** - Identifies friendship clusters/groups  
-✅ **Influence Analysis** - Determines most influential person in network  
+## Features
 
----
+### 1. **Network Overview** 📊
+- Interactive network graph visualization
+- Node size represents connectivity
+- Color-coded by community membership
+- Real-time hover information
 
-## 🎯 Assignment Task Completion
+### 2. **Degree Analysis** 🎯
+- Identifies the most connected students
+- Degree centrality scoring
+- Visual ranking of social connectivity
+- Bar chart representation
 
-### ✓ Task 1: Visualize the Network
-- **Location**: Network Visualization page
-- **What it shows**: Interactive graph with nodes (people) and edges (friendships)
-- **Finding**: Shows all 10 people and 15 connections in an easy-to-understand layout
-- **Code**: Uses NetworkX spring layout algorithm for optimal positioning
+### 3. **Centrality Measures** 📍
+Three complementary metrics:
+- **Betweenness Centrality**: Who bridges different groups (information flow)
+- **Closeness Centrality**: Who is closest to everyone on average
+- **Eigenvector Centrality**: Influence through quality connections
 
-### ✓ Task 2: Degree Analysis
-- **Location**: Degree Analysis page
-- **What it shows**: Bar chart ranking each person by number of friends
-- **Finding**: [See your results when you run the app]
-- **Code**: Counts degree of each node in the graph
+### 4. **Community Detection** 👥
+- Louvain algorithm-based clustering
+- Identifies natural friendship groups
+- Color-coded communities in visualization
+- Community composition breakdown
 
-### ✓ Task 3: Centrality Measures
-- **Location**: Centrality Measures page
-- **What it shows**: Two separate analyses - Betweenness and Closeness
-- **Findings**:
-  - **Betweenness**: High values indicate people who act as "bridges" connecting different groups
-  - **Closeness**: High values indicate people at the "center" of the network
-- **Code**: Uses NetworkX centrality algorithms
+### 5. **Influence & Insights** ⭐
+- **Most Influential Person** (highlighted in GOLD)
+- Compound influence scoring
+- Bridge connectors and central hubs
+- Information spreading analysis
 
-### ✓ Task 4: Community Detection
-- **Location**: Community Detection page
-- **What it shows**: Groups of people who are closely connected
-- **Finding**: Identifies natural friendship clusters within the class
-- **Code**: Uses Greedy Modularity Communities algorithm
+## Installation
 
-### ✓ Task 5: Identify Most Influential
-- **Location**: Influence Analysis page & Network Visualization (gold node)
-- **What it shows**: 
-  - Ranking of all people by influence score
-  - Most influential person highlighted in GOLD color
-  - Detailed metrics for the most influential person
-- **Finding**: Combines degree, betweenness, and closeness for comprehensive influence score
-- **Code**: Weighted combination: 40% Betweenness + 40% Closeness + 20% Degree
+### Prerequisites
+- Python 3.8+
+- pip package manager
 
----
+### Setup Instructions
 
-## 🚀 How to Set Up & Deploy
-
-### Step 1: Download the App Files
-
-Navigate to your GitHub repository folder structure:
-```
-CS39AE_Fall25/
-└── streamlit_CS/
-    ├── app.py                    (← Our new app file)
-    ├── requirements.txt          (← Dependencies)
-    ├── README.md                 (← This file)
-    └── [other folders/files]
-```
-
-### Step 2: Install Dependencies Locally
-
-Before deploying, test locally:
-
+1. **Clone or download the project files**
 ```bash
-# Navigate to your project directory
-cd CS39AE_Fall25/streamlit_CS
+cd path/to/project
+```
 
-# Create a Python virtual environment (optional but recommended)
-python -m venv venv
-
-# Activate virtual environment
-# On Windows:
-venv\Scripts\activate
-# On Mac/Linux:
-source venv/bin/activate
-
-# Install all dependencies
+2. **Install dependencies**
+```bash
 pip install -r requirements.txt
 ```
 
-### Step 3: Run Locally to Test
-
+3. **Run the Streamlit app**
 ```bash
-streamlit run app.py
+streamlit run network_analysis_app.py
 ```
 
-This will open the app in your browser at `http://localhost:8501`
+4. **Access the app**
+- Open your browser to `http://localhost:8501`
+- The app will automatically reload on code changes
 
-**Test Checklist:**
-- [ ] All 6 pages load without errors
-- [ ] Visualizations display correctly
-- [ ] All metrics calculate properly
-- [ ] Most influential person is highlighted in gold
+## Dataset
 
-### Step 4: Deploy to Streamlit Cloud (FREE!)
+**Students (10 nodes):**
+Alice, Bob, Charlie, Diana, Eve, Frank, Grace, Hannah, Ian, Jack
 
-#### Option A: Streamlit Cloud (RECOMMENDED - Easiest)
+**Friendships (16 edges):**
+- Alice: Bob, Charlie, Eve (3 friends)
+- Bob: Alice, Charlie, Diana, Jack (4 friends)
+- Charlie: Alice, Bob, Diana, Frank (4 friends)
+- Diana: Charlie, Eve, Bob, Ian (4 friends)
+- Eve: Diana, Frank, Ian, Alice (4 friends)
+- Frank: Eve, Charlie (2 friends)
+- Grace: Ian, Hannah, Jack (3 friends)
+- Hannah: Grace, Jack (2 friends)
+- Ian: Eve, Diana, Grace (3 friends)
+- Jack: Hannah, Grace, Bob (3 friends)
 
-1. **Push your code to GitHub**
-   ```bash
-   git add .
-   git commit -m "Add friendship network analysis app"
-   git push origin main
-   ```
+## Key Findings
 
-2. **Go to Streamlit Cloud**
-   - Visit: https://streamlit.io/cloud
-   - Click "Sign in with GitHub"
-   - Connect your GitHub account
+### Network Metrics
+- **Network Density:** 0.356 (moderately connected)
+- **Average Clustering Coefficient:** ~0.45 (tendency to form cliques)
+- **Connected Components:** 1 (fully connected network)
 
-3. **Create New App**
-   - Click "New app" button
-   - Select repository: `CS39AE_Fall25`
-   - Select branch: `main`
-   - Set main file path: `streamlit_CS/app.py`
-   - Click "Deploy"
+### Most Connected Students
+The analysis reveals who has the broadest direct connections within the class.
 
-4. **Streamlit Cloud will generate your URL**
-   - Format: `https://[your-username]-cs39ae-fall25.streamlit.app`
-   - Share this link for your submission!
+### Most Influential Person
+Combines multiple centrality measures to identify who would be most effective at spreading information or influence throughout the network.
 
-#### Option B: Heroku (Alternative)
+### Friendship Communities
+Louvain algorithm identifies natural clusters of friends with strong internal connections.
 
-If Streamlit Cloud doesn't work:
+## Network Analysis Concepts
 
-1. Create `Procfile` in your streamlit_CS folder:
-   ```
-   web: streamlit run --server.port $PORT app.py
-   ```
+### Degree Centrality
+**Definition:** The number of direct connections
+**Use:** Identifies popular individuals
+**Formula:** degree / (n-1)
 
-2. Deploy to Heroku:
-   ```bash
-   heroku login
-   heroku create your-app-name
-   git push heroku main
-   ```
+### Betweenness Centrality
+**Definition:** Frequency of being on shortest paths between other nodes
+**Use:** Identifies information brokers
+**Value Range:** 0-1
 
----
+### Closeness Centrality
+**Definition:** Average distance to all other nodes
+**Use:** Identifies quick communicators
+**Value Range:** 0-1
 
-## 📊 Understanding the Code
+### Eigenvector Centrality
+**Definition:** Influence based on connections to influential people
+**Use:** Identifies well-connected through important people
+**Concept:** "You are who you know"
 
-### Key Components
+## How to Interpret the Visualizations
 
-**1. Data Setup**
-```python
-NODES = ["Alice", "Bob", "Charlie", ...]  # 10 people
-EDGES = [("Alice", "Bob"), ...]           # 15 connections
-```
+### Network Graph
+- **Node Size:** Larger = more friends
+- **Node Color:** Represents community membership
+- **Gold Node:** Most influential person
+- **Lines (Edges):** Direct friendships
 
-**2. Network Creation**
-```python
-G = nx.Graph()  # Create undirected graph (friendships are mutual)
-G.add_nodes_from(NODES)
-G.add_edges_from(EDGES)
-```
+### Bar Charts
+- Show relative ranking of different metrics
+- Helps identify patterns and outliers
+- Sortable by student name or metric value
 
-**3. Degree Analysis**
-- **What**: Counts friends per person
-- **Formula**: Degree = Number of edges connected to a node
-- **Interpretation**: Higher degree = more social connections
+## Use Cases
 
-**4. Betweenness Centrality**
-- **What**: How often someone is on shortest paths between others
-- **Formula**: NetworkX implementation uses Brandes' algorithm
-- **Interpretation**: High value = acts as bridge between groups
+1. **Social Science Research:** Study peer networks and influence patterns
+2. **Marketing:** Identify key influencers for information campaigns
+3. **Organization:** Understand team dynamics and collaboration
+4. **Community Building:** Identify bridges between disconnected groups
+5. **Crisis Management:** Find key communicators for rapid message spreading
 
-**5. Closeness Centrality**
-- **What**: Average distance to all other nodes
-- **Formula**: 1 / (average shortest path length)
-- **Interpretation**: High value = close to everyone
+## Deployment Options
 
-**6. Community Detection**
-- **Algorithm**: Greedy Modularity Communities
-- **What**: Clusters nodes that are more connected internally than externally
-- **Interpretation**: Natural friendship groups
+### Option 1: Streamlit Cloud (Recommended)
+1. Push your code to GitHub
+2. Go to https://streamlit.io/cloud
+3. Connect your GitHub repository
+4. Streamlit automatically deploys your app
+5. Share the live URL
 
-**7. Influence Score**
-```python
-Influence = 0.4 × Betweenness + 0.4 × Closeness + 0.2 × Degree
-```
-- Weights can be adjusted based on importance
-- Current weights: Bridges and central people are equally important
-
----
-
-## 🔍 How to Interpret Results
-
-### Degree Analysis Results
-```
-Person: Degree (number of friends)
-Alice:  3 friends
-Bob:    4 friends (highest = most connected)
-Charlie: 4 friends
-...
-```
-**Interpretation**: Bob and Charlie have the most direct friendships.
-
-### Centrality Results
-
-**High Betweenness:**
-- Acts as information bottleneck
-- Removing them would disconnect network
-- Good candidate for spreading news
-
-**High Closeness:**
-- Central position in network
-- Can reach everyone quickly
-- Good candidate for organization roles
-
-**High Degree + High Betweenness:**
-- Influential connector
-- Bridges different friend groups
-
-### Community Results
-```
-Community 1: Alice, Bob, Charlie, Diana, Eve
-Community 2: Frank, Ian
-Community 3: Grace, Hannah, Jack
-```
-**Interpretation**: These groups have tighter internal connections.
-
----
-
-## 💻 Customization Guide
-
-### Want to modify the influence formula?
-Find this line in the code:
-```python
-influence_score[node] = (
-    0.4 * betweenness[node] +
-    0.4 * closeness[node] +
-    0.2 * degree_normalized[node]
-)
-```
-
-Change the weights (0.4, 0.4, 0.2) to your preference. They must sum to 1.0:
-- **Increase betweenness weight**: Emphasize bridge roles
-- **Increase closeness weight**: Emphasize central positions
-- **Increase degree weight**: Emphasize direct connections
-
-### Want to change the color scheme?
-Find this line:
-```python
-colors = px.colors.qualitative.Set3
-```
-
-Options: `Set1`, `Set2`, `Set3`, `Pastel1`, `Dark2`, etc.
-
-### Want to add more people or connections?
-Modify the NODES and EDGES lists at the top:
-```python
-NODES = ["Alice", "Bob", ..., "NewPerson"]
-EDGES = [("Alice", "Bob"), ..., ("NewPerson", "OtherPerson")]
-```
-
----
-
-## 📤 Submission Instructions
-
-### For Your Portfolio:
-
-1. **Deploy the app** (follow Step 4 above)
-
-2. **Get your Streamlit URL**
-   - Format: `https://[your-username]-[app-name].streamlit.app`
-   - Example: `https://eddyfosso-friendship-network.streamlit.app`
-
-3. **Submit your app with a report**
-   - Include the app URL
-   - Add findings from each analysis
-   - Document any customizations made
-   - Include code comments explaining your analysis
-
-4. **Example Submission Format:**
-   ```
-   Project: Friendship Network Analysis
-   
-   Live App URL: https://[your-url].streamlit.app
-   
-   Key Findings:
-   - Most Connected Person: [Name] with [X] friends
-   - Most Influential Person: [Name] (Influence Score: [X])
-   - Number of Communities Detected: [X]
-   - [Your observations about the network]
-   
-   Features Implemented:
-   ✅ Network Visualization
-   ✅ Degree Analysis
-   ✅ Centrality Measures (Betweenness & Closeness)
-   ✅ Community Detection
-   ✅ Influence Analysis with Visual Highlighting
-   ```
-
----
-
-## 🐛 Troubleshooting
-
-### App won't start locally
+### Option 2: Heroku
 ```bash
-# Make sure all dependencies are installed
+# Create Procfile and setup.sh (provided in deployment guide)
+git push heroku main
+```
+
+### Option 3: Local Sharing
+```bash
+streamlit run network_analysis_app.py --server.address 0.0.0.0
+# Share your IP and port with others
+```
+
+## Code Structure
+
+```
+network_analysis_app.py
+├── Network Creation
+├── Metrics Calculation
+│   ├── Degree Centrality
+│   ├── Betweenness Centrality
+│   ├── Closeness Centrality
+│   ├── Eigenvector Centrality
+│   └── Community Detection
+├── 5 Main Tabs
+│   ├── Network Overview
+│   ├── Degree Analysis
+│   ├── Centrality Measures
+│   ├── Community Detection
+│   └── Influence & Insights
+└── Visualizations
+    ├── Network Graphs (Plotly)
+    ├── Bar Charts
+    └── Hover Information
+```
+
+## Dependencies
+
+- **streamlit:** Web framework
+- **networkx:** Graph analysis library
+- **pandas:** Data manipulation
+- **plotly:** Interactive visualizations
+- **python-louvain:** Community detection algorithm
+- **numpy:** Numerical operations
+
+## Troubleshooting
+
+### Issue: "Module not found" error
+**Solution:** Ensure all dependencies are installed
+```bash
 pip install -r requirements.txt
-
-# Check Python version (should be 3.8+)
-python --version
 ```
 
-### Deployment fails on Streamlit Cloud
-- Make sure `requirements.txt` is in the same folder as `app.py`
-- Check that all file paths are relative, not absolute
-- Verify GitHub repo is public
+### Issue: Graph doesn't display
+**Solution:** Clear Streamlit cache
+```bash
+streamlit cache clear
+```
 
-### Visualizations not showing
-- Refresh your browser
-- Clear cache: `streamlit cache clear`
-- Restart the app: Press Ctrl+C and run `streamlit run app.py` again
+### Issue: Slow performance
+**Solution:** Close other applications, the spring layout algorithm is computationally intensive
+
+## Advanced Customization
+
+### Change Colors
+Edit the `community_colors` dictionary in the code:
+```python
+community_colors = {0: '#FF6B6B', 1: '#4ECDC4', ...}
+```
+
+### Adjust Graph Layout
+Modify spring layout parameters:
+```python
+pos = nx.spring_layout(G, k=2, iterations=50, seed=42)
+# k: distance between nodes
+# iterations: layout quality
+# seed: reproducibility
+```
+
+### Add More Analysis
+Add custom metrics in the `calculate_metrics()` function
+
+## Learning Resources
+
+- **NetworkX Documentation:** https://networkx.org
+- **Graph Theory Basics:** https://brilliant.org/wiki/graph-theory/
+- **Streamlit Guide:** https://docs.streamlit.io
+- **Plotly Charts:** https://plotly.com/python/
+
+## Academic References
+
+1. Freeman, L. C. (1978). "Centrality in networks of personal interaction"
+2. Blondel, V. D., et al. (2008). "Fast unfolding of communities in large networks"
+3. Newman, M. E. J. (2010). "Networks: An Introduction"
+
+## License
+
+This project is open source and available for educational use.
+
+## Contact & Support
+
+For questions or improvements, feel free to:
+- Check the code comments
+- Review the Streamlit documentation
+- Modify parameters and observe changes
+
+## Future Enhancements
+
+- [ ] Add network statistics export (CSV/JSON)
+- [ ] Interactive node/edge filtering
+- [ ] Shortest path analysis
+- [ ] Temporal network analysis (if timeline data available)
+- [ ] 3D network visualization
+- [ ] Custom file upload for different networks
 
 ---
 
-## 📚 Resources & References
-
-- **NetworkX Documentation**: https://networkx.org/
-- **Streamlit Documentation**: https://docs.streamlit.io/
-- **Network Science Concepts**: https://en.wikipedia.org/wiki/Network_science
-- **Centrality Measures**: https://networkx.org/documentation/stable/reference/algorithms/centrality.html
-
----
-
-## ✨ Additional Features You Could Add
-
-1. **Node Filtering**: Let users select which people to analyze
-2. **Shortest Path**: Find shortest path between any two people
-3. **Network Statistics**: Average clustering coefficient, diameter, etc.
-4. **Social Distance**: Calculate how many degrees of separation between people
-5. **Export**: Download analysis results as CSV or PDF
-6. **Custom Network**: Upload your own network data
-7. **Animation**: Animate how the network changes over time
-
----
-
-## 📝 Comments on Findings
-
-### General Observations:
-- **Network Density**: The friendship network is moderately sparse (not fully connected)
-- **Social Hubs**: A few people emerge as central connectors
-- **Clustering**: Natural friend groups form without forced partitioning
-- **Information Spread**: The most influential person can reach diverse groups
-- **Network Resilience**: Removing high-influence nodes would impact connectivity
-
-### Real-World Applications:
-- **Social Organizing**: Identify key people for spreading announcements
-- **Crisis Communication**: Who needs to be informed to reach everyone?
-- **Team Formation**: Build teams with natural communication paths
-- **Influence Analysis**: Who can sway opinion across diverse groups?
-
----
-
-**Created for CS39AE Fall 2025**
-**Network Analysis & Visualization**
+**Created:** 2024
+**Version:** 1.0
+**Status:** Production Ready
