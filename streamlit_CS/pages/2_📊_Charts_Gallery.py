@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import altair as alt
 
-df = pd.read_csv('data/Student_Learning_Analytics.csv')
+df = pd.read_csv('Student_Learning_Analytics.csv')
 
 st.title("📊 EDA Gallery")
 
