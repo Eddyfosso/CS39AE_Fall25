@@ -19,7 +19,7 @@ FUN_FACTS = [
     "I want to build websites",
 ]
 
-PHOTO_PATH = "f.jpg"
+PHOTO_URL = "f.jpg"
 
 st.title("👋 My Bio")
 
