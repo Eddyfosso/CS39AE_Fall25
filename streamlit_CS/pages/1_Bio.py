@@ -1,8 +1,5 @@
 import streamlit as st
 
-# ===============================#
-#          User Info             #
-# ===============================#
 NAME = "Eddy Fosso"
 PROGRAM = "CS39AE Data Visualization / Data Science and Machine Learning / Student"
 INTRO = (
@@ -22,16 +19,8 @@ FUN_FACTS = [
     "I want to build websites",
 ]
 
-# ===============================#
-#      Image Setup (Robust)      #
-# ===============================#
-# Use a stable image URL to avoid MediaFileStorageError.
+PHOTO_PATH = "f.jpg"
 
-# PHOTO_URL = "assets/f.jpg"  # Uncomment only when the file exists
-
-# ===============================#
-#         Page Layout            #
-# ===============================#
 st.title("👋 My Bio")
 
 col1, col2 = st.columns([1, 2], gap="large")
