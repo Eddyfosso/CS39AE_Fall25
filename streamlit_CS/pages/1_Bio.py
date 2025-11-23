@@ -1,6 +1,7 @@
 import streamlit as st
 
 st.title("👋 My Bio")
+st.image("assets/profile_img.jpg", caption="Your Name", width=150)
 
 NAME = "Eddy Fosso"
 PROGRAM = "CS39AE Data Visualization / Data Science and Machine Learning / Student"
